@@ -128,8 +128,22 @@ fig3.update_layout(width=1000, height=600)
 
 
 if page=='Yıllık Enflasyon':
-    
-    st.write("**Ocak Ayı Enflasyon Tahmini:%6.69(Önceki %6.47)**")
+    st.markdown(
+    """
+    <style>
+        /* Özel stil ayarları */
+        .black-text {
+            color: black;
+        }
+        .red-text {
+            color: red;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+    st.markdown('<p class="black-text">Ocak Ayı Enflasyon Tahmini:</p>', unsafe_allow_html=True)
+    st.markdown('<p class="red-text">%6.60(Önceki %6.47)</p>', unsafe_allow_html=True)
     st.write("**Güncelleme Tarihi:22 Ocak 2024**")
     st.write("**Sonraki Güncelleme Tarihi:25 Ocak 2024**")
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
