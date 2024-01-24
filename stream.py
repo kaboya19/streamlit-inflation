@@ -128,19 +128,7 @@ fig3.update_layout(width=1000, height=600)
 
 
 if page=='Yıllık Enflasyon':
-    st.markdown(
-    """
-    <style>
-        button[title^=Exit]+div [data-testid=stImage]{
-            text-align: center;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
-    </style>
-    """, unsafe_allow_html=True
-)
+    
     st.write("Ocak Ayı Enflasyon Tahmini:%6.69(Önceki %6.47)")
     st.write("Güncelleme Tarihi:22 Ocak 2024")
     st.write("Sonraki Güncelleme Tarihi:25 Ocak 2024")
