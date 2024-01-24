@@ -135,10 +135,12 @@ if page=='Yıllık Enflasyon':
         .black-text {
             color: black;
             font-size: 24px;
+            font-weight: bold;
         }
         .red-text {
             color: red;
             font-size: 24px;
+            font-weight: bold;
         }
     </style>
     """,
