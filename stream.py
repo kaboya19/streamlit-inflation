@@ -141,6 +141,9 @@ if page=='Yıllık Enflasyon':
     </style>
     """, unsafe_allow_html=True
 )
+    st.markdown("<h1 style='text-align:left;'>Ocak Ayı Enflasyon Tahmini:%6.69(Önceki %6.47)(</h1>",unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align:left;'>Güncelleme Tarihi:22 Ocak 2024(</h1>",unsafe_allow_html=True)
+    t.markdown("<h1 style='text-align:left;'>Sonraki Güncelleme Tarihi:25 Ocak 2024(</h1>",unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
