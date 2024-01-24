@@ -144,8 +144,13 @@ if page=='Yıllık Enflasyon':
     """,
     unsafe_allow_html=True
 )
-    st.markdown('<p class="inline-text black-text">Ocak Ayı Enflasyon Tahmini:class="inline-text red-text">%6.60(Önceki %6.47)</p>', unsafe_allow_html=True)
-    #st.markdown('<p class="inline-text red-text">%6.60(Önceki %6.47)</p>', unsafe_allow_html=True)
+    col1, col2 = st.columns(2)
+
+# Sol sütunda siyah yazı
+    col1.markdown("Ocak Ayı Enflasyon Tahmini:", unsafe_allow_html=True)
+
+# Sağ sütunda kırmızı yazı
+    col2.markdown('<p style="color: red;">%6.60</p>', unsafe_allow_html=True)
     st.write("**Güncelleme Tarihi:22 Ocak 2024**")
     st.write("**Sonraki Güncelleme Tarihi:25 Ocak 2024**")
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
