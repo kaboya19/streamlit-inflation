@@ -149,10 +149,10 @@ if page=='Yıllık Enflasyon':
     col1, col2 = st.columns(2)
 
 # Sol sütunda siyah yazı
-    col1.markdown('<p class="inline-text black-text">Ocak Ayı Enflasyon Tahmini:</p>', unsafe_allow_html=True)
+    col1.markdown('<p class="inline-text black-text" style="padding-right: 5px;">Ocak Ayı Enflasyon Tahmini:</p>', unsafe_allow_html=True)
 
 # Sağ sütunda kırmızı yazı
-    col2.markdown('<p class="inline-text red-text">%6.60 (Önceki %6.47)</p>', unsafe_allow_html=True)
+    col2.markdown('<p class="inline-text red-text"> %6.60 (Önceki %6.47)</p>', unsafe_allow_html=True)
     st.markdown('<p class="inline-text black-text">Güncelleme Tarihi:22 Ocak 2024</p>', unsafe_allow_html=True)
     st.markdown('<p class="inline-text black-text">Sonraki Güncelleme Tarihi:25 Ocak 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
