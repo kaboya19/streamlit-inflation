@@ -141,9 +141,9 @@ if page=='Yıllık Enflasyon':
     </style>
     """, unsafe_allow_html=True
 )
-    st.write("*Ocak Ayı Enflasyon Tahmini:%6.69(Önceki %6.47)*")
-    st.write("*Güncelleme Tarihi:22 Ocak 2024*")
-    st.write("*Sonraki Güncelleme Tarihi:25 Ocak 2024*")
+    st.write("Ocak Ayı Enflasyon Tahmini:%6.69(Önceki %6.47)")
+    st.write("Güncelleme Tarihi:22 Ocak 2024")
+    st.write("Sonraki Güncelleme Tarihi:25 Ocak 2024")
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
