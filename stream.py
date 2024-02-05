@@ -197,8 +197,8 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4) 
-    if selected_model=='Şubat 2024':
-       sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
+    if selected_model=='Mart 2024':
+       sorted_index = modelaylık.iloc[1, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
        sorted_modelaylık = modelaylık[sorted_index]
@@ -223,7 +223,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4) 
-    if selected_model=='Mart 2024':
+    if selected_model=='Nisan 2024':
        sorted_index = modelaylık.iloc[2, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -249,7 +249,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Nisan 2024':
+    if selected_model=='Mayıs 2024':
        sorted_index = modelaylık.iloc[3, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -275,7 +275,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Mayıs 2024':
+    if selected_model=='Haziran 2024':
        sorted_index = modelaylık.iloc[4, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -301,7 +301,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Haziran 2024':
+    if selected_model=='Temmuz 2024':
        sorted_index = modelaylık.iloc[5, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -327,7 +327,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Temmuz 2024':
+    if selected_model=='Ağustos 2024':
        sorted_index = modelaylık.iloc[6, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -353,7 +353,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Ağustos 2024':
+    if selected_model=='Eylül 2024':
        sorted_index = modelaylık.iloc[7, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -379,7 +379,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Eylül 2024':
+    if selected_model=='Ekim 2024':
        sorted_index = modelaylık.iloc[8, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -405,7 +405,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Ekim 2024':
+    if selected_model=='Kasım 2024':
        sorted_index = modelaylık.iloc[9, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -431,7 +431,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Kasım 2024':
+    if selected_model=='Aralık 2024':
        sorted_index = modelaylık.iloc[10, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
