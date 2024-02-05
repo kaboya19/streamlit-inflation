@@ -457,32 +457,8 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Aralık 2024':
-       sorted_index = modelaylık.iloc[11, :].sort_values(ascending=False).index
-
-# Sort the DataFrame columns based on the sorted index
-       sorted_modelaylık = modelaylık[sorted_index]
-
-# Set custom colors for each bar
-       color_map = px.colors.sequential.Viridis
-       fig4 = px.bar(
-    x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[11, :].values,
-    text=sorted_modelaylık.iloc[11, :].values,
-    color=np.arange(len(sorted_modelaylık.columns)),
-    color_continuous_scale='Rainbow',
-    labels={'y': 'Tahmin','x':'Model'},
-    title="Model Predictions"
-)
-       fig4.update_layout(width=800, height=600)
-       fig4.update_layout(coloraxis_showscale=False)
-       fig4.update_layout(
-       title="Aralık Ayı Enflasyon Tahmini",
-       showlegend=False
-)
-       fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
-       fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
-       st.plotly_chart(fig4)
+    
+      
 
     
 if page == "Hakkında":
