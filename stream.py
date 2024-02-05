@@ -198,7 +198,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4) 
     if selected_model=='Şubat 2024':
-       sorted_index = modelaylık.iloc[1, :].sort_values(ascending=False).index
+       sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
        sorted_modelaylık = modelaylık[sorted_index]
