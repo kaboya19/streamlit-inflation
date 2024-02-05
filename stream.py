@@ -170,7 +170,7 @@ if page=='Model Bazlı Yıllık Tahmin':
     st.plotly_chart(fig3)
 if page=='Model Bazlı Aylık Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    selected_model = st.sidebar.selectbox("Tarih", ["Ocak 2024", "Şubat 2024","Mart 2024","Nisan 2024","Mayıs 2024","Haziran 2024","Temmuz 2024","Ağustos 2024","Eylül 2024","Ekim 2024","Kasım 2024","Aralık 2024"])
+    selected_model = st.sidebar.selectbox("Tarih", ["Şubat 2024","Mart 2024","Nisan 2024","Mayıs 2024","Haziran 2024","Temmuz 2024","Ağustos 2024","Eylül 2024","Ekim 2024","Kasım 2024","Aralık 2024"])
     if selected_model=='Ocak 2024':
        sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
 
