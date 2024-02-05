@@ -191,7 +191,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Ocak Ayı Enflasyon Tahmini",
+       title="Şubat Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -217,7 +217,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Şubat Ayı Enflasyon Tahmini",
+       title="Mart Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -243,7 +243,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Mart Ayı Enflasyon Tahmini",
+       title="Nisan Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -269,7 +269,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Nisan Ayı Enflasyon Tahmini",
+       title="Mayıs Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -295,7 +295,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Mayıs Ayı Enflasyon Tahmini",
+       title="Haziran Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -321,7 +321,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Haziran Ayı Enflasyon Tahmini",
+       title="Temmuz Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -347,7 +347,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Temmuz Ayı Enflasyon Tahmini",
+       title="Ağustos Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -373,7 +373,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Ağustos Ayı Enflasyon Tahmini",
+       title="Eylül Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -399,7 +399,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Eylül Ayı Enflasyon Tahmini",
+       title="Ekim Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -425,7 +425,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Ekim Ayı Enflasyon Tahmini",
+       title="Kasım Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -451,7 +451,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Kasım Ayı Enflasyon Tahmini",
+       title="Aralık Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
