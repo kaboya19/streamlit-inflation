@@ -98,13 +98,14 @@ fig1.update_layout(width=1000, height=600)
 
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:24].index,y=yıllıktahmin["Ortalama"].iloc[1:24],mode='lines',name="Enflasyon"),
-go.Scatter(x=yıllıktahmin["Gaussian Regression"].iloc[23:-2].index,y=yıllıktahmin["Minimum"].iloc[23:],mode='lines',name="Gaussian Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[23:-2].index,y=yıllıktahmin["Maksimum"].iloc[23:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Gaussian Regression"].iloc[23:-2].index,y=yıllıktahmin["Gaussian Regression"].iloc[23:],mode='lines',name="Gaussian Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[23:-2].index,y=yıllıktahmin["SGD Regressor"].iloc[23:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[23:-2].index,y=yıllıktahmin["Lasso Regression"].iloc[23:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[23:-2].index,y=yıllıktahmin["Lars Regression"].iloc[23:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[23:-2].index,y=yıllıktahmin["Kernel Regression"].iloc[23:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[23:-2].index,y=yıllıktahmin["Bayessian Regression"].iloc[23:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[23:-2].index,y=yıllıktahmin["Linear Regression"].iloc[23:],mode='lines',name="Linear Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["LSTM"].iloc[23:-2].index,y=yıllıktahmin["LSTM"].iloc[23:],mode='lines',name="LSTM",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Robust Regression"].iloc[23:-2].index,y=yıllıktahmin["Robust Regression"].iloc[23:],mode='lines',name="Robust Regression",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
