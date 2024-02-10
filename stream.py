@@ -106,7 +106,9 @@ go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[23:-2].index,y=yıllıktah
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[23:-2].index,y=yıllıktahmin["Bayessian Regression"].iloc[23:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[23:-2].index,y=yıllıktahmin["Linear Regression"].iloc[23:],mode='lines',name="Linear Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["LSTM"].iloc[23:-2].index,y=yıllıktahmin["LSTM"].iloc[23:],mode='lines',name="LSTM",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Robust Regression"].iloc[23:-2].index,y=yıllıktahmin["Robust Regression"].iloc[23:],mode='lines',name="Robust Regression",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["Robust Regression"].iloc[23:-2].index,y=yıllıktahmin["Robust Regression"].iloc[23:],mode='lines',name="Robust Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Random Forest"].iloc[23:-2].index,y=yıllıktahmin["Random Forest"].iloc[23:],mode='lines',name="Random Forest",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Neural Network"].iloc[23:-2].index,y=yıllıktahmin["Neural Network"].iloc[23:],mode='lines',name="Neural Network",line={'dash':'dash'}),
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
@@ -155,11 +157,11 @@ if page=='Yıllık Enflasyon':
     st.markdown(
     '<div style="display: flex;">'
     '<p class="inline-text black-text" style="margin-right: 1px;">Şubat Ayı Enflasyon Tahmini:</p>'
-    '<p class="inline-text red-text">%3.18(Önceki %3.17)</p>'
+    '<p class="inline-text red-text">%3.54(Önceki %3.18)</p>'
     '</div>',
     unsafe_allow_html=True
 )
-    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:8 Şubat 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:10 Şubat 2024</p>', unsafe_allow_html=True)
     st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:15 Şubat 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
