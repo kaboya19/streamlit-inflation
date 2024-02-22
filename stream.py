@@ -157,7 +157,7 @@ if page=='Yıllık Enflasyon':
     st.markdown(
     '<div style="display: flex;">'
     '<p class="inline-text black-text" style="margin-right: 1px;">Şubat Ayı Enflasyon Tahmini:</p>'
-    '<p class="inline-text red-text">%3.47(Önceki %3.54)</p>'
+    '<p class="inline-text red-text">%3.54(Önceki %3.47)</p>'
     '</div>',
     unsafe_allow_html=True
 )
