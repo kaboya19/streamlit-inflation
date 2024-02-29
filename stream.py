@@ -107,7 +107,6 @@ go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[23:-2].index,y=yıllık
 go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[23:-2].index,y=yıllıktahmin["Linear Regression"].iloc[23:],mode='lines',name="Linear Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["LSTM"].iloc[23:-2].index,y=yıllıktahmin["LSTM"].iloc[23:],mode='lines',name="LSTM",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Robust Regression"].iloc[23:-2].index,y=yıllıktahmin["Robust Regression"].iloc[23:],mode='lines',name="Robust Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Passive Agressive Regressor"].iloc[23:-2].index,y=yıllıktahmin["Passive Agressive Regressor"].iloc[23:],mode='lines',name="Passive Agressive Regressor",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["ARD Regressor"].iloc[23:-2].index,y=yıllıktahmin["ARD Regressor"].iloc[23:],mode='lines',name="ARD Regressor",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
