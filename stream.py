@@ -101,7 +101,7 @@ go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:24].index,y=yıllıktahmin["Ortal
 go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[23:-2].index,y=yıllıktahmin["SGD Regressor"].iloc[23:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[23:-2].index,y=yıllıktahmin["Lasso Regression"].iloc[23:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[23:-2].index,y=yıllıktahmin["Lars Regression"].iloc[23:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Kernel Ridge"].iloc[23:-2].index,y=yıllıktahmin["Kernel Regression"].iloc[23:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Kernel Ridge"].iloc[23:-2].index,y=yıllıktahmin["Kernel Ridge"].iloc[23:],mode='lines',name="Kernel Ridge",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[23:-2].index,y=yıllıktahmin["Bayessian Regression"].iloc[23:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[23:-2].index,y=yıllıktahmin["Linear Regression"].iloc[23:],mode='lines',name="Linear Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Huber Regressor"].iloc[23:-2].index,y=yıllıktahmin["Huber Regressor"].iloc[23:],mode='lines',name="Huber Regressor",line={'dash':'dash'})
