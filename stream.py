@@ -155,13 +155,13 @@ if page=='Yıllık Enflasyon':
     #col2.markdown('<p class="inline-text red-text"> %6.60 (Önceki %6.47)</p>', unsafe_allow_html=True)
     st.markdown(
     '<div style="display: flex;">'
-    '<p class="inline-text black-text" style="margin-right: 1px;">Şubat Ayı Enflasyon Tahmini:</p>'
-    '<p class="inline-text red-text">%3.70(Önceki %3.54)</p>'
+    '<p class="inline-text black-text" style="margin-right: 1px;">Mart Ayı Enflasyon Tahmini:</p>'
+    '<p class="inline-text red-text">%3.73(Önceki %3.65)</p>'
     '</div>',
     unsafe_allow_html=True
 )
-    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:29 Şubat 2024</p>', unsafe_allow_html=True)
-    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:4 Mart 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:14 Mart 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:15 Mart 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
