@@ -98,7 +98,7 @@ fig1.update_layout(width=1000, height=600)
 
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:24].index,y=yıllıktahmin["Ortalama"].iloc[1:24],mode='lines',name="Enflasyon"),
-go.Scatter(x=yıllıktahmin["Ortalama"].iloc[23:-2].index,y=yıllıktahmin["Baz Senaryo"].iloc[23:],mode='lines',name="Baz Senaryo",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Ortalama"].iloc[23:-2].index,y=yıllıktahmin["Ortalama"].iloc[23:],mode='lines',name="Baz Senaryo",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[23:-2].index,y=yıllıktahmin["SGD Regressor"].iloc[23:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[23:-2].index,y=yıllıktahmin["Lasso Regression"].iloc[23:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[23:-2].index,y=yıllıktahmin["Lars Regression"].iloc[23:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
