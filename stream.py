@@ -158,8 +158,8 @@ if page=='Yıllık Enflasyon':
     '</div>',
     unsafe_allow_html=True
 )
-    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:14 Mart 2024</p>', unsafe_allow_html=True)
-    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:15 Mart 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:15 Mart 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:21 Mart 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
