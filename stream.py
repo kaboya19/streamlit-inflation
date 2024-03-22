@@ -105,7 +105,8 @@ go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[23:-2].index,y=yıllıktahmi
 go.Scatter(x=yıllıktahmin["Kernel Ridge"].iloc[23:-2].index,y=yıllıktahmin["Kernel Ridge"].iloc[23:],mode='lines',name="Kernel Ridge",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[23:-2].index,y=yıllıktahmin["Bayessian Regression"].iloc[23:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[23:-2].index,y=yıllıktahmin["Linear Regression"].iloc[23:],mode='lines',name="Linear Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Huber Regressor"].iloc[23:-2].index,y=yıllıktahmin["Huber Regressor"].iloc[23:],mode='lines',name="Huber Regressor",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["Huber Regressor"].iloc[23:-2].index,y=yıllıktahmin["Huber Regressor"].iloc[23:],mode='lines',name="Huber Regressor",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN"].iloc[23:-2].index,y=yıllıktahmin["NN"].iloc[23:],mode='lines',name="Neural Network",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
@@ -154,12 +155,12 @@ if page=='Yıllık Enflasyon':
     st.markdown(
     '<div style="display: flex;">'
     '<p class="inline-text black-text" style="margin-right: 1px;">Mart Ayı Enflasyon Tahmini:</p>'
-    '<p class="inline-text red-text">%3.88(Önceki %3.73)</p>'
+    '<p class="inline-text red-text">%3.78(Önceki %3.88)</p>'
     '</div>',
     unsafe_allow_html=True
 )
-    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:15 Mart 2024</p>', unsafe_allow_html=True)
-    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:21 Mart 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:22 Mart 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:28 Mart 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
