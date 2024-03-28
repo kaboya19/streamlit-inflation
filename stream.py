@@ -36,10 +36,10 @@ del dfas["Unnamed: 0"]
 dfas=dfas.rename_axis(["Tarih"])
 
 fig1 = go.Figure()
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:25],y=yıllıktahmin["Ortalama"].iloc[:25],mode='lines',name="Enflasyon"))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[24:-1],y=yıllıktahmin["Ortalama"].iloc[24:-1],mode='lines',line_color='red',line=dict(dash='dash')))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[25:-1],y=yıllıktahmin["Ortalama"].iloc[25:-1],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[21:25],y=[61.94,60.84,62.18,64.70],mode='markers',name="Geçmiş Tahminler",line_color="black"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:24],y=yıllıktahmin["Ortalama"].iloc[:24],mode='lines',name="Enflasyon"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-1],y=yıllıktahmin["Ortalama"].iloc[23:-1],mode='lines',line_color='red',line=dict(dash='dash')))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-1],y=yıllıktahmin["Ortalama"].iloc[23:-1],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[18:24],y=[61.94,60.84,62.18,64.70,65.06,65.73],mode='markers',name="Geçmiş Tahminler",line_color="black"))
 fig1.update_traces(line=dict(width=3)) 
 
 fig1.update_layout(
@@ -60,12 +60,12 @@ fig1.update_xaxes(
 )
 
 
-last_12_months = aylık.iloc[-24:-13]
+last_12_months = aylık.iloc[-24:-14]
 fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'},text=last_12_months["Aylık Enflasyon"])
 fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
 
 # Filter the next 12 months for predictions
-next_12_months = aylık.iloc[-13:].copy()
+next_12_months = aylık.iloc[-14:].copy()
 
 fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin",text=next_12_months["Aylık Enflasyon"]))
 fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
@@ -98,14 +98,15 @@ fig1.update_layout(width=1000, height=600)
 
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:24].index,y=yıllıktahmin["Ortalama"].iloc[1:24],mode='lines',name="Enflasyon"),
-go.Scatter(x=yıllıktahmin["Gaussian Regression"].iloc[23:-2].index,y=yıllıktahmin["Minimum"].iloc[23:],mode='lines',name="Gaussian Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[23:-2].index,y=yıllıktahmin["Maksimum"].iloc[23:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Ortalama"].iloc[23:-2].index,y=yıllıktahmin["Ortalama"].iloc[23:],mode='lines',name="Baz Senaryo",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[23:-2].index,y=yıllıktahmin["SGD Regressor"].iloc[23:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[23:-2].index,y=yıllıktahmin["Lasso Regression"].iloc[23:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[23:-2].index,y=yıllıktahmin["Lars Regression"].iloc[23:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[23:-2].index,y=yıllıktahmin["Kernel Regression"].iloc[23:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Kernel Ridge"].iloc[23:-2].index,y=yıllıktahmin["Kernel Ridge"].iloc[23:],mode='lines',name="Kernel Ridge",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[23:-2].index,y=yıllıktahmin["Bayessian Regression"].iloc[23:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[23:-2].index,y=yıllıktahmin["Linear Regression"].iloc[23:],mode='lines',name="Linear Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Robust Regression"].iloc[23:-2].index,y=yıllıktahmin["Robust Regression"].iloc[23:],mode='lines',name="Robust Regression",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["Huber Regressor"].iloc[23:-2].index,y=yıllıktahmin["Huber Regressor"].iloc[23:],mode='lines',name="Huber Regressor",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN"].iloc[23:-2].index,y=yıllıktahmin["NN"].iloc[23:],mode='lines',name="Neural Network",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
@@ -153,12 +154,13 @@ if page=='Yıllık Enflasyon':
     #col2.markdown('<p class="inline-text red-text"> %6.60 (Önceki %6.47)</p>', unsafe_allow_html=True)
     st.markdown(
     '<div style="display: flex;">'
-    '<p class="inline-text black-text" style="margin-right: 1px;">Ocak Ayı Enflasyon Tahmini:</p>'
-    '<p class="inline-text red-text">%6.83(Önceki %6.84)</p>'
+    '<p class="inline-text black-text" style="margin-right: 1px;">Mart Ayı Enflasyon Tahmini:</p>'
+    '<p class="inline-text red-text">%3.76(Önceki %3.88)</p>'
     '</div>',
     unsafe_allow_html=True
 )
-    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:29 Ocak 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:22 Mart 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:28 Mart 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
@@ -169,8 +171,16 @@ if page=='Model Bazlı Yıllık Tahmin':
     st.plotly_chart(fig3)
 if page=='Model Bazlı Aylık Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    selected_model = st.sidebar.selectbox("Tarih", ["Ocak 2024", "Şubat 2024","Mart 2024","Nisan 2024","Mayıs 2024","Haziran 2024","Temmuz 2024","Ağustos 2024","Eylül 2024","Ekim 2024","Kasım 2024","Aralık 2024"])
-    if selected_model=='Ocak 2024':
+    selected_model = st.sidebar.selectbox("Tarih", ["Mart 2024","Nisan 2024","Mayıs 2024","Haziran 2024","Temmuz 2024","Ağustos 2024","Eylül 2024","Ekim 2024","Kasım 2024","Aralık 2024","Ocak 2025"])
+    if selected_model=='Şubat 2024':
+       sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
+
+# Sort the DataFrame columns based on the sorted index
+       sorted_modelaylık = modelaylık[sorted_index]
+
+# Set custom colors for each bar
+       color_map = px.colors.sequential.Viridis
+    if selected_model=='Mart 2024':
        sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -190,13 +200,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Ocak Ayı Enflasyon Tahmini",
+       title="Mart Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4) 
-    if selected_model=='Şubat 2024':
+    if selected_model=='Nisan 2024':
        sorted_index = modelaylık.iloc[1, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -216,13 +226,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Şubat Ayı Enflasyon Tahmini",
+       title="Nisan Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
-       st.plotly_chart(fig4) 
-    if selected_model=='Mart 2024':
+       st.plotly_chart(fig4)
+    if selected_model=='Mayıs 2024':
        sorted_index = modelaylık.iloc[2, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -242,13 +252,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Mart Ayı Enflasyon Tahmini",
+       title="Mayıs Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Nisan 2024':
+    if selected_model=='Haziran 2024':
        sorted_index = modelaylık.iloc[3, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -268,13 +278,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Nisan Ayı Enflasyon Tahmini",
+       title="Haziran Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Mayıs 2024':
+    if selected_model=='Temmuz 2024':
        sorted_index = modelaylık.iloc[4, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -294,13 +304,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Mayıs Ayı Enflasyon Tahmini",
+       title="Temmuz Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Haziran 2024':
+    if selected_model=='Ağustos 2024':
        sorted_index = modelaylık.iloc[5, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -320,13 +330,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Haziran Ayı Enflasyon Tahmini",
+       title="Ağustos Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Temmuz 2024':
+    if selected_model=='Eylül 2024':
        sorted_index = modelaylık.iloc[6, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -346,13 +356,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Temmuz Ayı Enflasyon Tahmini",
+       title="Eylül Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Ağustos 2024':
+    if selected_model=='Ekim 2024':
        sorted_index = modelaylık.iloc[7, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -372,13 +382,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Ağustos Ayı Enflasyon Tahmini",
+       title="Ekim Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Eylül 2024':
+    if selected_model=='Kasım 2024':
        sorted_index = modelaylık.iloc[8, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -398,13 +408,13 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Eylül Ayı Enflasyon Tahmini",
+       title="Kasım Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
-    if selected_model=='Ekim 2024':
+    if selected_model=='Aralık 2024':
        sorted_index = modelaylık.iloc[9, :].sort_values(ascending=False).index
 
 # Sort the DataFrame columns based on the sorted index
@@ -424,64 +434,14 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
-       title="Ekim Ayı Enflasyon Tahmini",
-       showlegend=False
-)
-       fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
-       fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
-       st.plotly_chart(fig4)
-    if selected_model=='Kasım 2024':
-       sorted_index = modelaylık.iloc[10, :].sort_values(ascending=False).index
-
-# Sort the DataFrame columns based on the sorted index
-       sorted_modelaylık = modelaylık[sorted_index]
-
-# Set custom colors for each bar
-       color_map = px.colors.sequential.Viridis
-       fig4 = px.bar(
-    x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[10, :].values,
-    text=sorted_modelaylık.iloc[10, :].values,
-    color=np.arange(len(sorted_modelaylık.columns)),
-    color_continuous_scale='Rainbow',
-    labels={'y': 'Tahmin','x':'Model'},
-    title="Model Predictions"
-)
-       fig4.update_layout(width=800, height=600)
-       fig4.update_layout(coloraxis_showscale=False)
-       fig4.update_layout(
-       title="Kasım Ayı Enflasyon Tahmini",
-       showlegend=False
-)
-       fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
-       fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
-       st.plotly_chart(fig4)
-    if selected_model=='Aralık 2024':
-       sorted_index = modelaylık.iloc[11, :].sort_values(ascending=False).index
-
-# Sort the DataFrame columns based on the sorted index
-       sorted_modelaylık = modelaylık[sorted_index]
-
-# Set custom colors for each bar
-       color_map = px.colors.sequential.Viridis
-       fig4 = px.bar(
-    x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[11, :].values,
-    text=sorted_modelaylık.iloc[11, :].values,
-    color=np.arange(len(sorted_modelaylık.columns)),
-    color_continuous_scale='Rainbow',
-    labels={'y': 'Tahmin','x':'Model'},
-    title="Model Predictions"
-)
-       fig4.update_layout(width=800, height=600)
-       fig4.update_layout(coloraxis_showscale=False)
-       fig4.update_layout(
        title="Aralık Ayı Enflasyon Tahmini",
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
        fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
+    
+      
 
     
 if page == "Hakkında":
