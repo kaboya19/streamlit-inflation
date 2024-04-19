@@ -39,7 +39,7 @@ fig1 = go.Figure()
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:24],y=yıllıktahmin["Ortalama"].iloc[:24],mode='lines',name="Enflasyon"))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-1],y=yıllıktahmin["Ortalama"].iloc[23:-1],mode='lines',line_color='red',line=dict(dash='dash')))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-1],y=yıllıktahmin["Ortalama"].iloc[23:-1],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[18:24],y=[61.94,60.84,62.18,64.70,65.06,65.73],mode='markers',name="Geçmiş Tahminler",line_color="black"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[18:25],y=[61.94,60.84,62.18,64.70,65.06,65.73,69.47],mode='markers',name="Geçmiş Tahminler",line_color="black"))
 fig1.update_traces(line=dict(width=3)) 
 
 fig1.update_layout(
@@ -98,15 +98,10 @@ fig1.update_layout(width=1000, height=600)
 
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:24].index,y=yıllıktahmin["Ortalama"].iloc[1:24],mode='lines',name="Enflasyon"),
-go.Scatter(x=yıllıktahmin["Ortalama"].iloc[23:-2].index,y=yıllıktahmin["Ortalama"].iloc[23:],mode='lines',name="Baz Senaryo",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[23:-2].index,y=yıllıktahmin["SGD Regressor"].iloc[23:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[23:-2].index,y=yıllıktahmin["Lasso Regression"].iloc[23:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[23:-2].index,y=yıllıktahmin["Lars Regression"].iloc[23:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Kernel Ridge"].iloc[23:-2].index,y=yıllıktahmin["Kernel Ridge"].iloc[23:],mode='lines',name="Kernel Ridge",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[23:-2].index,y=yıllıktahmin["Bayessian Regression"].iloc[23:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[23:-2].index,y=yıllıktahmin["Linear Regression"].iloc[23:],mode='lines',name="Linear Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Huber Regressor"].iloc[23:-2].index,y=yıllıktahmin["Huber Regressor"].iloc[23:],mode='lines',name="Huber Regressor",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["NN"].iloc[23:-2].index,y=yıllıktahmin["NN"].iloc[23:],mode='lines',name="Neural Network",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["Ortalama"].iloc[23:-2].index,y=yıllıktahmin["Ortalama"].iloc[23:],mode='lines',name="Ortalama",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN1"].iloc[23:-2].index,y=yıllıktahmin["NN1"].iloc[23:],mode='lines',name="Neural Network 1",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN2"].iloc[23:-2].index,y=yıllıktahmin["NN2"].iloc[23:],mode='lines',name="Neural Network 2",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN3"].iloc[23:-2].index,y=yıllıktahmin["NN3"].iloc[23:],mode='lines',name="Neural Network 3",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
