@@ -151,8 +151,8 @@ if page=='Yıllık Enflasyon':
     #col2.markdown('<p class="inline-text red-text"> %6.60 (Önceki %6.47)</p>', unsafe_allow_html=True)
     st.markdown(
     '<div style="display: flex;">'
-    '<p class="inline-text black-text" style="margin-right: 1px;">Nisan Ayı Enflasyon Tahmini:</p>'
-    '<p class="inline-text red-text">%3.11(Önceki %3.25)</p>'
+    '<p class="inline-text black-text" style="margin-right: 1px;">Mayıs Ayı Enflasyon Tahmini:</p>'
+    '<p class="inline-text red-text">%3.23</p>'
     '</div>',
     unsafe_allow_html=True
 )
