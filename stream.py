@@ -65,7 +65,7 @@ fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labe
 fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
 
 # Filter the next 12 months for predictions
-next_12_months = aylık.iloc[-14:].copy()
+next_12_months = aylık.iloc[-13:].copy()
 
 fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin",text=next_12_months["Aylık Enflasyon"]))
 fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
