@@ -168,7 +168,7 @@ if page=='Model Bazlı Yıllık Tahmin':
     st.plotly_chart(fig3)
 if page=='Model Bazlı Aylık Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    selected_model = st.sidebar.selectbox("Tarih", ["Nisan 2024","Mayıs 2024","Haziran 2024","Temmuz 2024","Ağustos 2024","Eylül 2024","Ekim 2024","Kasım 2024","Aralık 2024","Ocak 2025"])
+    selected_model = st.sidebar.selectbox("Tarih", ["Mayıs 2024","Haziran 2024","Temmuz 2024","Ağustos 2024","Eylül 2024","Ekim 2024","Kasım 2024","Aralık 2024","Ocak 2025"])
     if selected_model=='Şubat 2024':
        sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
 
@@ -176,32 +176,7 @@ if page=='Model Bazlı Aylık Tahmin':
        sorted_modelaylık = modelaylık[sorted_index]
 
 
-    if selected_model=='Nisan 2024':
-       sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
-
-# Sort the DataFrame columns based on the sorted index
-       sorted_modelaylık = modelaylık[sorted_index]
-
-# Set custom colors for each bar
-       color_map = px.colors.sequential.Viridis
-       fig4 = px.bar(
-    x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[0, :].values,
-    text=sorted_modelaylık.iloc[0, :].values,
-    color=np.arange(len(sorted_modelaylık.columns)),
-    color_continuous_scale='Rainbow',
-    labels={'y': 'Tahmin','x':'Model'},
-    title="Model Predictions"
-)
-       fig4.update_layout(width=800, height=600)
-       fig4.update_layout(coloraxis_showscale=False)
-       fig4.update_layout(
-       title="Nisan Ayı Enflasyon Tahmini",
-       showlegend=False
-)
-       fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
-       fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
-       st.plotly_chart(fig4)
+    
     if selected_model=='Mayıs 2024':
        sorted_index = modelaylık.iloc[1, :].sort_values(ascending=False).index
 
