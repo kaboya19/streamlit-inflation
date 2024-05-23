@@ -74,9 +74,11 @@ fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon
 fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
 fig2.update_traces(
     {
-        "textfont": {"size": 40} # Metin boyutunu 14 olarak ayarlıyoruz, istediğiniz değeri kullanabilirsiniz
+        "textposition": "outside",
+        "textfont": {"size": 14}  # Metin boyutunu 14 olarak ayarlıyoruz, istediğiniz değeri kullanabilirsiniz
     }
 )
+
 
 fig2.update_layout(font=dict(family="Arial Black", size=40, color="black"),xaxis=dict(
         title_font=dict(family="Arial Black", size=20, color="black"),
