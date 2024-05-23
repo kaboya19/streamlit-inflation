@@ -36,7 +36,6 @@ dfas=dfas.set_index(dfas["Unnamed: 0"])
 del dfas["Unnamed: 0"]
 dfas=dfas.rename_axis(["Tarih"])
 
-
 fig1 = go.Figure()
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:25],y=yıllıktahmin["Ortalama"].iloc[:25],mode='lines',name="Enflasyon"))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[24:-1],y=yıllıktahmin["Ortalama"].iloc[24:-1],mode='lines',line_color='red',line=dict(dash='dash')))
@@ -47,9 +46,7 @@ fig1.update_traces(line=dict(width=3))
 fig1.update_layout(
     xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
     yaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),
-    font=dict(family="Arial", size=14, color="black"),
-    width=1000,  # Adjust the width as needed
-    height=600  # Adjust the height as needed
+    font=dict(family="Arial", size=14, color="black")
 )
 
 fig1.update_xaxes(
@@ -62,10 +59,6 @@ fig1.update_xaxes(
 fig1.update_xaxes(
     range=[yıllıktahmin.index[1], yıllıktahmin.index[-2]]  # Set the range from the first to the last date in your data
 )
-
-st.plotly_chart(fig1)
-
-
 
 last_12_months = aylık.iloc[-24:-14]
 fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'},text=last_12_months["Aylık Enflasyon"])
