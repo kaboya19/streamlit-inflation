@@ -69,9 +69,9 @@ fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle
 # Filter the next 12 months for predictions
 next_12_months = aylık.iloc[-14:].copy()
 
-fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin",text=next_12_months["Aylık Enflasyon"]))
+fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin",text=next_12_months["Aylık Enflasyon"],textfont=dict(size=50)))
 
-fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
+fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0,textfont=dict(size=50))
 
 
 fig2.update_layout(font=dict(family="Arial Black", size=40, color="black"),xaxis=dict(
