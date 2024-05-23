@@ -47,8 +47,7 @@ fig1.update_layout(
     xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
     yaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),
     font=dict(family="Arial", size=14, color="black"),
-    height=1500,
-    width=1500
+    margin=dict(l=100, r=100, t=100, b=100)  # Sol, sağ, üst ve alt kenar boşluklarını belirleme
 )
 
 fig1.update_xaxes(
