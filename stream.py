@@ -87,6 +87,7 @@ fig2.update_layout(font=dict(size=35), xaxis=dict(
     xaxis_tick0=aylık.index[-23],
     xaxis_dtick="M2"
 )
+fig2.update_traces(textfont=dict(size=35), selector=dict(type='bar'))
 
 
 
