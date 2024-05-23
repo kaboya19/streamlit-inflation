@@ -58,8 +58,8 @@ fig1.update_xaxes(
 
 layout = go.Layout(
     autosize=False,
-    width=1000,
-    height=1000,
+    width=2000,
+    height=2000,
     margin=go.layout.Margin(l=50, r=50, b=100, t=100, pad=4),
 )
 
