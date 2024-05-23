@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
 st.set_page_config(page_title="Türkiye Enflasyon Tahmini")
-tabs=["Yıllık Enflasyon","Aylık Enflasyon","Model Bazlı Yıllık Tahmin","Model Bazlı Aylık Tahmin","Metodoloji","Hakkında"]
+tabs=["Yıllık Enflasyon","Aylık Enflasyon","Model Bazlı Yıllık Tahmin","Model Bazlı Aylık Tahmin","Performans Tablomuz","Metodoloji","Hakkında"]
 page=st.sidebar.radio("Sekmeler",tabs)
 yıllıktahmin=pd.read_csv("yıllıktahmin.csv")
 yıllıktahmin=yıllıktahmin.set_index(yıllıktahmin["Unnamed: 0"])
@@ -417,7 +417,8 @@ if page == "Metodoloji":
             "<p>Her bir bağımsız değişkenin gelecek değerleri Prophet modeliyle tahmin edilmiş, bunlar 6 farklı Yapay Sinir Ağı modeliyle tahmin edilmiştir.Mevcut ay enflasyon tahmini için gerçek veriler,gelecek aylar için Prophet tahminleri kullanılmaktadır.</p>"
             "</div>", unsafe_allow_html=True)
 
-
+if page == "Performans Tablomuz":
+   st.image("https://pbs.twimg.com/media/GMo4N3UXIAA1ABA?format=png&name=medium")
    
 
     
