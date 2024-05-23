@@ -43,7 +43,11 @@ fig1.add_trace(go.Scatter(x=yıllıktahmin.index[25:-1],y=yıllıktahmin["Ortala
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[16:24],y=[61.94,60.84,62.18,64.70,65.06,65.73,69.47,69.69],mode='markers',name="Geçmiş Tahminler",line_color="black"))
 fig1.update_traces(line=dict(width=3)) 
 
-
+fig1.update_layout(
+    xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
+    yaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),
+    font=dict(family="Arial", size=14, color="black")
+)
 
 fig1.update_xaxes(
     tickformat="%Y-%m",  # Adjust the format as needed
@@ -54,13 +58,6 @@ fig1.update_xaxes(
 )
 fig1.update_xaxes(
     range=[yıllıktahmin.index[1], yıllıktahmin.index[-2]]  # Set the range from the first to the last date in your data
-)
-
-layout = go.Layout(
-    autosize=False,
-    width=2000,
-    height=2000,
-    margin=go.layout.Margin(l=50, r=50, b=100, t=100, pad=4),
 )
 
 
@@ -165,7 +162,7 @@ if page=='Yıllık Enflasyon':
     st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:23 Mayıs 2024</p>', unsafe_allow_html=True)
     st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:30 Mayıs 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    st.plotly_chart(fig1,layout=layout)
+    st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig2)
