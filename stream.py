@@ -47,7 +47,7 @@ fig1.update_layout(
     xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
     yaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),
     font=dict(family="Arial", size=14, color="black"),
-        width=1000,  # Adjust the width as needed
+        width=2000,  # Adjust the width as needed
     height=600  # Adjust the height as needed
 )
 
