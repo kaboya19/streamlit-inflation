@@ -46,9 +46,7 @@ fig1.update_traces(line=dict(width=3))
 fig1.update_layout(
     xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
     yaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),
-    font=dict(family="Arial", size=14, color="black"),
-        width=2000,  # Adjust the width as needed
-    height=600  # Adjust the height as needed
+    font=dict(family="Arial", size=14, color="black")
 )
 
 fig1.update_xaxes(
@@ -61,6 +59,8 @@ fig1.update_xaxes(
 fig1.update_xaxes(
     range=[yıllıktahmin.index[1], yıllıktahmin.index[-2]]  # Set the range from the first to the last date in your data
 )
+
+fig1.update_layout(height=1500,width=1500)
 
 
 last_12_months = aylık.iloc[-24:-14]
@@ -163,7 +163,7 @@ if page=='Yıllık Enflasyon':
     st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:23 Mayıs 2024</p>', unsafe_allow_html=True)
     st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:30 Mayıs 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    st.plotly_chart(fig1, use_container_width=True,height=5000)
+    st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig2)
