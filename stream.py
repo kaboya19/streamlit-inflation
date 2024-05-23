@@ -62,8 +62,8 @@ fig1.update_xaxes(
 
 fig1.update_layout(
     autosize=False,
-    width=1500,
-    height=1500,
+    width=3000,
+    height=3000,
     margin=dict(l=50, r=50, t=50, b=50)
 )
 
