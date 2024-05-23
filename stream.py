@@ -64,23 +64,23 @@ fig1.update_xaxes(
 
 last_12_months = aylık.iloc[-24:-14]
 fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'},text=last_12_months["Aylık Enflasyon"])
-fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0,textfont=dict(size=50))
+fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
 
 # Filter the next 12 months for predictions
 next_12_months = aylık.iloc[-14:].copy()
 
-fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin",text=next_12_months["Aylık Enflasyon"],textfont=dict(size=50)))
+fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin",text=next_12_months["Aylık Enflasyon"]))
 
-fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0,textfont=dict(size=50))
+fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
 
 
 fig2.update_layout(font=dict(family="Arial Black", size=40, color="black"),xaxis=dict(
-        title_font=dict(family="Arial Black", size=40, color="black"),
-        tickfont=dict(size=40, family="Arial Black", color="black")
+        title_font=dict(family="Arial Black", size=20, color="black"),
+        tickfont=dict(size=20, family="Arial Black", color="black")
     ),  
     yaxis=dict(
-        title_font=dict(family="Arial Black", size=40, color="black"),
-        tickfont=dict(size=40, family="Arial Black", color="black")
+        title_font=dict(family="Arial Black", size=20, color="black"),
+        tickfont=dict(size=20, family="Arial Black", color="black")
     ))
 fig2.update_xaxes(
     tickformat="%Y-%m"  # Adjust the format as needed
