@@ -61,6 +61,13 @@ fig1.update_xaxes(
     range=[yıllıktahmin.index[1], yıllıktahmin.index[-2]]  # Set the range from the first to the last date in your data
 )
 
+fig1.update_layout(
+    autosize=False,
+    width=1500,
+    height=1500,
+    margin=dict(l=50, r=50, t=50, b=50)
+)
+
 
 
 
