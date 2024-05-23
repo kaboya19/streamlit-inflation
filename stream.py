@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
+import matplotlib.pyplot as plt
 st.set_page_config(page_title="Türkiye Enflasyon Tahmini")
 tabs=["Yıllık Enflasyon","Aylık Enflasyon","Model Bazlı Yıllık Tahmin","Model Bazlı Aylık Tahmin","Performans Tablomuz","Metodoloji","Hakkında"]
 page=st.sidebar.radio("Sekmeler",tabs)
@@ -418,7 +419,38 @@ if page == "Metodoloji":
             "</div>", unsafe_allow_html=True)
 
 if page == "Performans Tablomuz":
-   st.image("https://pbs.twimg.com/media/GMo4N3UXIAA1ABA?format=png&name=medium")
+
+
+
+   gecmis=pd.DataFrame({"Aylık Enflasyon(%)":[4.75,3.43,3.28,2.93,6.70,4.53,3.16,3.18],"Tahmin(%)":[5.05,3.11,3.38,2.85,6.83,3.70,3.76,3.11]})
+   gecmis=gecmis.set_index(pd.date_range(start="2023-09-30",periods=8,freq="M"))
+   gecmis=gecmis.set_index(gecmis.index.strftime("%Y-%m"))
+
+   fig, ax = plt.subplots(figsize=(12,8))
+   gecmis.plot(kind="bar", ax=ax)
+
+   plt.annotate("4.75", xy=(-0.3,gecmis.iloc[0,0]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("5.05", xy=(0,gecmis.iloc[0,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.43", xy=(0.7,gecmis.iloc[1,0]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.11", xy=(1,gecmis.iloc[1,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.28", xy=(1.7,gecmis.iloc[2,0]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.38", xy=(2,gecmis.iloc[2,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("2.93", xy=(2.7,gecmis.iloc[3,0]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("2.85", xy=(3,gecmis.iloc[3,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("6.70", xy=(3.7,gecmis.iloc[4,0]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("6.83", xy=(4,gecmis.iloc[4,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("4.53", xy=(4.7,gecmis.iloc[5,0]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.70", xy=(5,gecmis.iloc[5,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.16", xy=(5.65,gecmis.iloc[6,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.76", xy=(6,gecmis.iloc[6,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.18", xy=(6.6,gecmis.iloc[7,0]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.11", xy=(7,gecmis.iloc[7,1]*0.95), fontweight="bold", fontsize=15)
+
+   plt.legend(fontsize=15)
+   plt.xticks(rotation=0, fontweight="bold", fontsize=15, color="black")
+
+   st.pyplot(fig)
+
    
 
     
