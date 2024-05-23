@@ -73,16 +73,16 @@ fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon
 fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
 fig2.update_layout(font=dict(family="Arial Black", size=40, color="black"),xaxis=dict(
         title_font=dict(family="Arial Black", size=28, color="black"),
-        tickfont=dict(size=14, family="Arial Black", color="black")
+        tickfont=dict(size=28, family="Arial Black", color="black")
     ),  
     yaxis=dict(
         title_font=dict(family="Arial Black", size=28, color="black"),
-        tickfont=dict(size=14, family="Arial Black", color="black")
+        tickfont=dict(size=28, family="Arial Black", color="black")
     ))
 fig2.update_xaxes(
     tickformat="%Y-%m"  # Adjust the format as needed
 )
-fig2.update_layout(width=2000, height=600) 
+fig2.update_layout(width=1500, height=600) 
 fig2.update_xaxes(
     tickformat="%Y-%m",  # Adjust the format as needed
     tickmode="linear",
