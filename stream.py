@@ -61,7 +61,7 @@ fig1.update_xaxes(
 fig1.update_xaxes(
     range=[yıllıktahmin.index[1], yıllıktahmin.index[-2]]  # Set the range from the first to the last date in your data
 )
-fig1_html = fig1.to_html(full_html=False)
+
 
 last_12_months = aylık.iloc[-24:-14]
 fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'},text=last_12_months["Aylık Enflasyon"])
@@ -163,8 +163,7 @@ if page=='Yıllık Enflasyon':
     st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:23 Mayıs 2024</p>', unsafe_allow_html=True)
     st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:30 Mayıs 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    st.write(fig1_html, unsafe_allow_html=True)
-
+    st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig2)
