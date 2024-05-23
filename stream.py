@@ -72,12 +72,6 @@ next_12_months = aylık.iloc[-14:].copy()
 fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin",text=next_12_months["Aylık Enflasyon"]))
 
 fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
-fig2.update_traces(
-    {
-        "textposition": "outside",
-        "textfont": {"size": 14}  # Metin boyutunu 14 olarak ayarlıyoruz, istediğiniz değeri kullanabilirsiniz
-    }
-)
 
 
 fig2.update_layout(font=dict(family="Arial Black", size=40, color="black"),xaxis=dict(
@@ -101,6 +95,11 @@ fig2.update_xaxes(
 )
 
 
+# Bütün barlar için metin boyutunu ayarla
+fig2.update_traces(textfont=dict(size=25), textposition='outside')
+
+# Tahminler için metin boyutunu ayrıca belirle
+fig2.update_traces(textfont=dict(size=25), selector=dict(name='Tahmin'))
 
 
 
