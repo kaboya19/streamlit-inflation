@@ -64,7 +64,7 @@ fig1.update_xaxes(
 
 last_12_months = aylık.iloc[-24:-14]
 fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'},text=last_12_months["Aylık Enflasyon"])
-fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
+fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0,textfont=dict(size=14))
 
 # Filter the next 12 months for predictions
 next_12_months = aylık.iloc[-14:].copy()
@@ -94,7 +94,7 @@ fig2.update_xaxes(
     dtick="M2"  # Set the tick interval to 2 months
 )
 
-fig2.update_traces(textfont=dict(size=50), textposition='outside')
+
 
 
 
