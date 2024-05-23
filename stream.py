@@ -96,7 +96,7 @@ fig2.update_xaxes(
 
 
 
-fig1.update_layout(width=1000, height=600)  
+fig1.update_layout(width=2000, height=600)  
 
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:25].index,y=yıllıktahmin["Ortalama"].iloc[1:25],mode='lines',name="Enflasyon"),
