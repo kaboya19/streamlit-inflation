@@ -434,7 +434,7 @@ if page=="Performans Tablomuz":
    plt.annotate("3.43", xy=(0.7,gecmis.iloc[1,0]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("3.11", xy=(1,gecmis.iloc[1,1]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("3.28", xy=(1.7,gecmis.iloc[2,0]*0.95), fontweight="bold", fontsize=15)
-   plt.annotate("3.38", xy=(2,gecmis.iloc[2,1]*0.96), fontweight="bold", fontsize=15)
+   plt.annotate("3.38", xy=(2,gecmis.iloc[2,1]*0.97), fontweight="bold", fontsize=15)
    plt.annotate("2.93", xy=(2.7,gecmis.iloc[3,0]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("2.85", xy=(3,gecmis.iloc[3,1]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("6.70", xy=(3.7,gecmis.iloc[4,0]*0.95), fontweight="bold", fontsize=15)
