@@ -46,7 +46,8 @@ fig1.update_traces(line=dict(width=3))
 fig1.update_layout(
     xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
     yaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),
-    font=dict(family="Arial", size=14, color="black")
+    font=dict(family="Arial", size=14, color="black"),
+    margin=dict(l=0, r=0, t=150, b=150)  # Sol, sağ, üst ve alt kenar boşluklarını belirleme
 )
 
 fig1.update_xaxes(
@@ -62,8 +63,8 @@ fig1.update_xaxes(
 
 fig1.update_layout(
     autosize=False,
-    width=3000,
-    height=3000,
+    width=1500,
+    height=1500,
     margin=dict(l=50, r=50, t=50, b=50)
 )
 
