@@ -94,12 +94,7 @@ fig2.update_xaxes(
     dtick="M2"  # Set the tick interval to 2 months
 )
 
-
-# Bütün barlar için metin boyutunu ayarla
-fig2.update_traces(textfont=dict(size=205), textposition='outside')
-
-# Tahminler için metin boyutunu ayrıca belirle
-fig2.update_traces(textfont=dict(size=250), selector=dict(name='Tahmin'))
+fig2.update_traces(textfont=dict(size=50), textposition='outside')
 
 
 
