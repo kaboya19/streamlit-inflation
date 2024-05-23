@@ -103,7 +103,8 @@ go.Scatter(x=yıllıktahmin["NN1"].iloc[24:-2].index,y=yıllıktahmin["NN1"].ilo
 go.Scatter(x=yıllıktahmin["NN2"].iloc[24:-2].index,y=yıllıktahmin["NN2"].iloc[24:],mode='lines',name="Neural Network 2",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["NN3"].iloc[24:-2].index,y=yıllıktahmin["NN3"].iloc[24:],mode='lines',name="Neural Network 3",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["NN4"].iloc[24:-2].index,y=yıllıktahmin["NN4"].iloc[24:],mode='lines',name="Neural Network 4",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["NN5"].iloc[24:-2].index,y=yıllıktahmin["NN5"].iloc[24:],mode='lines',name="Neural Network 5",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["NN5"].iloc[24:-2].index,y=yıllıktahmin["NN5"].iloc[24:],mode='lines',name="Neural Network 5",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN6"].iloc[24:-2].index,y=yıllıktahmin["NN6"].iloc[24:],mode='lines',name="Neural Network 6",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
