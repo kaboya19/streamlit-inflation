@@ -96,10 +96,10 @@ fig2.update_xaxes(
 
 
 # Bütün barlar için metin boyutunu ayarla
-fig2.update_traces(textfont=dict(size=25), textposition='outside')
+fig2.update_traces(textfont=dict(size=205), textposition='outside')
 
 # Tahminler için metin boyutunu ayrıca belirle
-fig2.update_traces(textfont=dict(size=25), selector=dict(name='Tahmin'))
+fig2.update_traces(textfont=dict(size=250), selector=dict(name='Tahmin'))
 
 
 
