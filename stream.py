@@ -402,7 +402,7 @@ if page == "Hakkında":
 if page == "Metodoloji":
     st.markdown("<div style='text-align: left;'>"
             "<h1>Metodoloji</h1>"
-            "<p>Tahmin için 17 adet ekonomik veri kullanılmaktadır.</p>"
+            "<p>Tahmin için 10 adet ekonomik veri kullanılmaktadır.</p>"
             "<p>1) 3 Aylık USD/TL Hareketli Ortalaması</p>"
             "<p>2) M2 Para Arzı (1 ay gecikmeli)</p>"
             "<p>3) M3 Para Arzı (1 ay gecikmeli)</p>"
