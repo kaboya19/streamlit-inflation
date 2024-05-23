@@ -82,7 +82,7 @@ fig2.update_layout(font=dict(family="Arial Black", size=40, color="black"),xaxis
 fig2.update_xaxes(
     tickformat="%Y-%m"  # Adjust the format as needed
 )
-fig2.update_layout(width=2000, height=1200) 
+fig2.update_layout(width=2000, height=600) 
 fig2.update_xaxes(
     tickformat="%Y-%m",  # Adjust the format as needed
     tickmode="linear",
