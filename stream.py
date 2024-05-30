@@ -37,8 +37,8 @@ del dfas["Unnamed: 0"]
 dfas=dfas.rename_axis(["Tarih"])
 
 fig1 = go.Figure()
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[13:25],y=yıllıktahmin["Ortalama"].iloc[13:25],mode='lines',name="Enflasyon"))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[24:-1],y=yıllıktahmin["Ortalama"].iloc[24:-1],mode='lines',line_color='red',line=dict(dash='dash')))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[13:24],y=yıllıktahmin["Ortalama"].iloc[13:24],mode='lines',name="Enflasyon"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-1],y=yıllıktahmin["Ortalama"].iloc[23:-1],mode='lines',line_color='red',line=dict(dash='dash')))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[25:-1],y=yıllıktahmin["Ortalama"].iloc[25:-1],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[16:24],y=[61.94,60.84,62.18,64.70,65.06,65.73,69.47,69.69],mode='markers',name="Geçmiş Tahminler",line_color="black"))
 fig1.update_traces(line=dict(width=3)) 
@@ -99,14 +99,14 @@ fig2.update_xaxes(
 fig1.update_layout(width=2000, height=600)  
 
 fig3 = go.FigureWidget(data=[
-go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:22].index,y=yıllıktahmin["Ortalama"].iloc[1:22],mode='lines',name="Enflasyon"),
-go.Scatter(x=yıllıktahmin["Ortalama"].iloc[23:-2].index,y=yıllıktahmin["Ortalama"].iloc[23:],mode='lines',name="Ortalama",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["NN1"].iloc[23:-2].index,y=yıllıktahmin["NN1"].iloc[23:],mode='lines',name="Neural Network 1",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["NN2"].iloc[23:-2].index,y=yıllıktahmin["NN2"].iloc[23:],mode='lines',name="Neural Network 2",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["NN3"].iloc[23:-2].index,y=yıllıktahmin["NN3"].iloc[23:],mode='lines',name="Neural Network 3",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["NN4"].iloc[23:-2].index,y=yıllıktahmin["NN4"].iloc[23:],mode='lines',name="Neural Network 4",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["NN5"].iloc[23:-2].index,y=yıllıktahmin["NN5"].iloc[23:],mode='lines',name="Neural Network 5",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["NN6"].iloc[23:-2].index,y=yıllıktahmin["NN6"].iloc[23:],mode='lines',name="Neural Network 6",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:25].index,y=yıllıktahmin["Ortalama"].iloc[1:25],mode='lines',name="Enflasyon"),
+go.Scatter(x=yıllıktahmin["Ortalama"].iloc[24:-2].index,y=yıllıktahmin["Ortalama"].iloc[24:],mode='lines',name="Ortalama",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN1"].iloc[24:-2].index,y=yıllıktahmin["NN1"].iloc[24:],mode='lines',name="Neural Network 1",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN2"].iloc[24:-2].index,y=yıllıktahmin["NN2"].iloc[24:],mode='lines',name="Neural Network 2",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN3"].iloc[24:-2].index,y=yıllıktahmin["NN3"].iloc[24:],mode='lines',name="Neural Network 3",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN4"].iloc[24:-2].index,y=yıllıktahmin["NN4"].iloc[24:],mode='lines',name="Neural Network 4",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN5"].iloc[24:-2].index,y=yıllıktahmin["NN5"].iloc[24:],mode='lines',name="Neural Network 5",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["NN6"].iloc[24:-2].index,y=yıllıktahmin["NN6"].iloc[24:],mode='lines',name="Neural Network 6",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
