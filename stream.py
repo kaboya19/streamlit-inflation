@@ -164,7 +164,7 @@ if page=='Yıllık Enflasyon':
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    st.image("https://i.hizliresim.com/kgcuokt.png")
+    st.image("https://img.imgyukle.com/2024/06/14/CkUoPt.png")
 if page=='Model Bazlı Yıllık Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig3)
@@ -441,7 +441,7 @@ if page=="Performans Tablomuz":
    plt.annotate("6.83", xy=(4,gecmis.iloc[4,1]*0.97), fontweight="bold", fontsize=15)
    plt.annotate("4.53", xy=(4.7,gecmis.iloc[5,0]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("3.70", xy=(5,gecmis.iloc[5,1]*0.95), fontweight="bold", fontsize=15)
-   plt.annotate("3.16", xy=(5.65,gecmis.iloc[6,0]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.16", xy=(5.65,gecmis.iloc[6,0]*0.85), fontweight="bold", fontsize=15)
    plt.annotate("3.76", xy=(6,gecmis.iloc[6,1]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("3.18", xy=(6.6,gecmis.iloc[7,0]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("3.11", xy=(7,gecmis.iloc[7,1]*0.95), fontweight="bold", fontsize=15)
