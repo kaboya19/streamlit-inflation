@@ -422,7 +422,7 @@ if page == "Metodoloji":
 if page=="Performans Tablomuz":
 
    plt.style.use("fivethirtyeight")
-   gecmis=pd.DataFrame({"Aylık Enflasyon(%)":[4.75,3.43,3.28,2.93,6.70,4.53,3.16,3.18],"Tahmin(%)":[5.05,3.11,3.38,2.85,6.83,3.70,3.76,3.11]})
+   gecmis=pd.DataFrame({"Aylık Enflasyon(%)":[4.75,3.43,3.28,2.93,6.70,4.53,3.16,3.18,3.37],"Tahmin(%)":[5.05,3.11,3.38,2.85,6.83,3.70,3.76,3.11,2.90]})
    gecmis=gecmis.set_index(pd.date_range(start="2023-09-30",periods=8,freq="M"))
    gecmis=gecmis.set_index(gecmis.index.strftime("%Y-%m"))
 
@@ -445,6 +445,8 @@ if page=="Performans Tablomuz":
    plt.annotate("3.76", xy=(6,gecmis.iloc[6,1]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("3.18", xy=(6.6,gecmis.iloc[7,0]*0.95), fontweight="bold", fontsize=15)
    plt.annotate("3.11", xy=(7,gecmis.iloc[7,1]*0.95), fontweight="bold", fontsize=15)
+   plt.annotate("3.37",xy=(7.6,gecmis.iloc[8,0]*0.95),fontweight="bold",fontsize=15)
+   plt.annotate("2.90",xy=(8,gecmis.iloc[8,1]*0.95),fontweight="bold",fontsize=15)
 
    plt.legend(fontsize=15)
    plt.xticks(rotation=0, fontweight="bold", fontsize=15, color="black")
