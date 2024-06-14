@@ -423,7 +423,7 @@ if page=="Performans Tablomuz":
 
    plt.style.use("fivethirtyeight")
    gecmis=pd.DataFrame({"Aylık Enflasyon(%)":[4.75,3.43,3.28,2.93,6.70,4.53,3.16,3.18,3.37],"Tahmin(%)":[5.05,3.11,3.38,2.85,6.83,3.70,3.76,3.11,2.90]})
-   gecmis=gecmis.set_index(pd.date_range(start="2023-09-30",periods=8,freq="M"))
+   gecmis=gecmis.set_index(pd.date_range(start="2023-09-30",periods=9,freq="M"))
    gecmis=gecmis.set_index(gecmis.index.strftime("%Y-%m"))
 
    fig, ax = plt.subplots(figsize=(12,8))
