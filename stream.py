@@ -39,7 +39,7 @@ dfas=dfas.rename_axis(["Tarih"])
 fig1 = go.Figure()
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[13:24],y=yıllıktahmin["Ortalama"].iloc[13:24],mode='lines',name="Enflasyon"))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-1],y=yıllıktahmin["Ortalama"].iloc[23:-1],mode='lines',line_color='red',line=dict(dash='dash')))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-1],y=yıllıktahmin["Ortalama"].iloc[23:-1],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[24:-1],y=yıllıktahmin["Ortalama"].iloc[24:-1],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[15:25],y=[61.94,60.84,62.18,64.70,65.06,65.73,69.47,69.69,74.65],mode='markers',name="Geçmiş Tahminler",line_color="black"))
 fig1.update_traces(line=dict(width=3)) 
 
@@ -153,13 +153,13 @@ if page=='Yıllık Enflasyon':
     #col2.markdown('<p class="inline-text red-text"> %6.60 (Önceki %6.47)</p>', unsafe_allow_html=True)
     st.markdown(
     '<div style="display: flex;">'
-    '<p class="inline-text black-text" style="margin-right: 1px;">Mayıs Ayı Enflasyon Tahmini:</p>'
-    '<p class="inline-text red-text">%2.90(Önceki %2.95)</p>'
+    '<p class="inline-text black-text" style="margin-right: 1px;">Haziran Ayı Enflasyon Tahmini:</p>'
+    '<p class="inline-text red-text">%2.55</p>'
     '</div>',
     unsafe_allow_html=True
 )
-    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:23 Mayıs 2024</p>', unsafe_allow_html=True)
-    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:30 Mayıs 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Son Güncellenme Tarihi:14 Haziran 2024</p>', unsafe_allow_html=True)
+    st.markdown('<p class="inline-text black-text">Sonraki Güncellenme Tarihi:27 Haziran 2024</p>', unsafe_allow_html=True)
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
