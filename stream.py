@@ -154,7 +154,7 @@ if page=='Yıllık Enflasyon':
     st.markdown(
     '<div style="display: flex;">'
     '<p class="inline-text black-text" style="margin-right: 1px;">Haziran Ayı Enflasyon Tahmini:</p>'
-    '<p class="inline-text red-text">%2.55</p>'
+    '<p class="inline-text red-text">%2.63(Önceki %2.55)</p>'
     '</div>',
     unsafe_allow_html=True
 )
@@ -164,7 +164,7 @@ if page=='Yıllık Enflasyon':
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    st.image("https://resmim.net/cdn/2024/06/14/fcC3fI.png")
+    st.image("https://resmim.net/cdn/2024/06/27/WS0AAc.png")
 if page=='Model Bazlı Yıllık Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig3)
