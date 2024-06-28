@@ -190,8 +190,8 @@ if page=='Model Bazlı Aylık Tahmin':
        color_map = px.colors.sequential.Viridis
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[1, :].values,
-    text=sorted_modelaylık.iloc[1, :].values,
+    y=sorted_modelaylık.iloc[0, :].values,
+    text=sorted_modelaylık.iloc[0, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
@@ -216,8 +216,8 @@ if page=='Model Bazlı Aylık Tahmin':
        color_map = px.colors.sequential.Viridis
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[2, :].values,
-    text=sorted_modelaylık.iloc[2, :].values,
+    y=sorted_modelaylık.iloc[1, :].values,
+    text=sorted_modelaylık.iloc[1, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
@@ -242,8 +242,8 @@ if page=='Model Bazlı Aylık Tahmin':
        color_map = px.colors.sequential.Viridis
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[3, :].values,
-    text=sorted_modelaylık.iloc[3, :].values,
+    y=sorted_modelaylık.iloc[2, :].values,
+    text=sorted_modelaylık.iloc[2, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
@@ -268,8 +268,8 @@ if page=='Model Bazlı Aylık Tahmin':
        color_map = px.colors.sequential.Viridis
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[4, :].values,
-    text=sorted_modelaylık.iloc[4, :].values,
+    y=sorted_modelaylık.iloc[3, :].values,
+    text=sorted_modelaylık.iloc[3, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
@@ -294,8 +294,8 @@ if page=='Model Bazlı Aylık Tahmin':
        color_map = px.colors.sequential.Viridis
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[5, :].values,
-    text=sorted_modelaylık.iloc[5, :].values,
+    y=sorted_modelaylık.iloc[4, :].values,
+    text=sorted_modelaylık.iloc[4, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
@@ -320,8 +320,8 @@ if page=='Model Bazlı Aylık Tahmin':
        color_map = px.colors.sequential.Viridis
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[6, :].values,
-    text=sorted_modelaylık.iloc[6, :].values,
+    y=sorted_modelaylık.iloc[5, :].values,
+    text=sorted_modelaylık.iloc[5, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
@@ -346,8 +346,8 @@ if page=='Model Bazlı Aylık Tahmin':
        color_map = px.colors.sequential.Viridis
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[7, :].values,
-    text=sorted_modelaylık.iloc[7, :].values,
+    y=sorted_modelaylık.iloc[6, :].values,
+    text=sorted_modelaylık.iloc[6, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
