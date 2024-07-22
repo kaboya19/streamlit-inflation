@@ -101,11 +101,11 @@ fig1.update_layout(width=2000, height=600)
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].loc["2023-09-30":"2024-06-30"].index,y=yıllıktahmin["Ortalama"].loc["2023-09-30":"2024-06-30"],mode='lines',name="Enflasyon"),
 go.Scatter(x=yıllıktahmin["Ortalama"].loc["2024-07-31":].index,y=yıllıktahmin["Ortalama"].loc["2024-07-31":],mode='lines',name="Ortalama",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["p1"].loc["2024-07-31":"2024-12-31"].index,y=yıllıktahmin["p1"].loc["2024-05-31":],mode='lines',name="Prophet 1",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["p2"].loc["2024-07-31":].index,y=yıllıktahmin["p2"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 2",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["p3"].loc["2024-07-31":].index,y=yıllıktahmin["p3"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 3",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["p4"].loc["2024-07-31":].index,y=yıllıktahmin["p4"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 4",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["p5"].loc["2024-07-31":].index,y=yıllıktahmin["p5"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 5",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["p1"].loc["2024-07-31":"2024-12-31"].index,y=yıllıktahmin["p1"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 1",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["p2"].loc["2024-07-31"::"2024-12-31"].index,y=yıllıktahmin["p2"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 2",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["p3"].loc["2024-07-31"::"2024-12-31"].index,y=yıllıktahmin["p3"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 3",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["p4"].loc["2024-07-31"::"2024-12-31"].index,y=yıllıktahmin["p4"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 4",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["p5"].loc["2024-07-31"::"2024-12-31"].index,y=yıllıktahmin["p5"].loc["2024-07-31":"2024-12-31"],mode='lines',name="Prophet 5",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
