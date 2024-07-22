@@ -57,7 +57,7 @@ fig1.update_xaxes(
     dtick="M2"  # Set the tick interval to 2 months
 )
 fig1.update_xaxes(
-    range=[yıllıktahmin.index[13], yıllıktahmin.index[-2]]  # Set the range from the first to the last date in your data
+    range=[yıllıktahmin.loc["2023-09-30"].index, yıllıktahmin.loc["2024-12-31"].index]  # Set the range from the first to the last date in your data
 )
 
 
