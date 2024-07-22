@@ -37,10 +37,10 @@ del dfas["Unnamed: 0"]
 dfas=dfas.rename_axis(["Tarih"])
 
 fig1 = go.Figure()
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[13:19],y=yıllıktahmin["Ensemble"].iloc[13:19],mode='lines',name="Enflasyon"))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[18:-1],y=yıllıktahmin["Ensemble"].iloc[18:-1],mode='lines',line_color='red',line=dict(dash='dash')))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[19:-1],y=yıllıktahmin["Ensemble"].iloc[19:-1],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[10:20],y=[61.94,60.84,62.18,64.70,65.06,65.73,69.47,69.69,74.65],mode='markers',name="Geçmiş Tahminler",line_color="black"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.loc["2023-09-30":"2024-07-31"].index,y=yıllıktahmin["Ortalama"].loc["2023-09-30":"2024-07-31"],mode='lines',name="Enflasyon"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.loc["2023-09-30":"2024-12-31"].index,y=yıllıktahmin["Ortalama"].loc["2023-09-30":"2024-12-31"],mode='lines',line_color='red',line=dict(dash='dash')))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.loc["2023-09-30":"2024-12-31"].index,y=yıllıktahmin["Ortalama"].loc["2023-09-30":"2024-12-31"],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.loc["2023-09-30":"2024-06-30"],y=[61.94,60.84,62.18,64.70,65.06,65.73,69.47,69.69,74.65,72.87],mode='markers',name="Geçmiş Tahminler",line_color="black"))
 fig1.update_traces(line=dict(width=3)) 
 
 fig1.update_layout(
